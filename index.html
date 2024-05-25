@@ -19,7 +19,7 @@
         width: 50vw;
         height: 50vw;
         animation: rotation 7s infinite linear;
-        opacity: 80%;
+        opacity: 60%;
     }
 
     .grad1 {
@@ -46,8 +46,17 @@
         width: 100vw;
         height: 100vh;
         backdrop-filter: blur(5px);
-        color:black
 
+    }
+
+    .darken {
+        position:fixed;
+        left:0px;
+        top:0px;
+        width: 100vw;
+        height: 100vh;
+        background:rgb(51, 26, 0);
+        opacity: 30%;
     }
 
     @keyframes rotation {
@@ -63,7 +72,9 @@
 </style>
 <div class="grad1"></div>
 <div class="grad2"></div>
-<img src="./assets/cog.png" class="cog1">
-<div class="blur"></div>
 <img src="./assets/cog.png" class="cog2">
 <div class="blur"></div>
+<div class="darken"></div>
+<img src="./assets/cog.png" class="cog1">
+<div class="blur"></div>
+<div class="darken"></div>

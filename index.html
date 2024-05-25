@@ -4,8 +4,8 @@
     } 
     .cog2 {
         position:fixed;
-        left:50vw;
-        top:0vh;
+        left:calc(40vw + calc(var(--mouse-x, 0) * 10vw));
+        top:calc(0vh + calc(var(--mouse-y, 0) * 10vh));
         width: 70vw;
         height: 70vw;
         animation: rotation 18s infinite linear;
@@ -14,8 +14,8 @@
     }
     .cog1 {
         position:fixed;
-        left:100vw;
-        top:100vh;
+        left:calc(80vw + calc(var(--mouse-x, 0) * 30vw));
+        top:calc(80vh + calc(var(--mouse-y, 0) * 30vh));
         width: 50vw;
         height: 50vw;
         animation: rotation 7s infinite linear;
@@ -72,6 +72,17 @@
         }
     }
 </style>
+<script>
+    const root = document.documentElement;
+ 
+    document.addEventListener('mousemove', evt => {
+        let x = evt.clientX / innerWidth;
+        let y = evt.clientY / innerHeight;
+  
+        root.style.setProperty('--mouse-x', x);
+        root.style.setProperty('--mouse-y', y);
+    });
+</script>
 <div class="grad1"></div>
 <div class="grad2"></div>
 <img src="./assets/cog.png" class="cog2">

@@ -12,6 +12,16 @@
         opacity: 50%;
 
     }
+    .cog3 {
+        position:fixed;
+        left:calc(0vw + calc(var(--mouse-x, 0) * 5vw));
+        top:calc(70vh + calc(var(--mouse-y, 0) * 5vh));
+        width: 100vw;
+        height: 100vw;
+        animation: rotation 30s infinite linear;
+        opacity: 30%;
+
+    }
     .cog1 {
         position:fixed;
         left:calc(80vw + calc(var(--mouse-x, 0) * 30vw));
@@ -45,7 +55,7 @@
         top:0px;
         width: 100vw;
         height: 100vh;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(7px);
 
     }
 
@@ -56,7 +66,7 @@
         width: 100vw;
         height: 100vh;
         background:rgb(51, 26, 0);
-        opacity: 30%;
+        opacity: 20%;
     }
 
 
@@ -85,6 +95,9 @@
 </script>
 <div class="grad1"></div>
 <div class="grad2"></div>
+<img src="./assets/cog.png" class="cog3">
+<div class="blur"></div>
+<div class="darken"></div>
 <img src="./assets/cog.png" class="cog2">
 <div class="blur"></div>
 <div class="darken"></div>
